@@ -2,6 +2,10 @@ import threads
 import math
 
 class RollerScrewMetric:
+    """ For designing roller screw linear actuators
+        many of the equations come from here:
+            http://www.creativemotioncontrol.com/home-copy/cmc-roller-screws/calculation-and-selection/efficiency-and-driving-torque
+    """
     def __init__(self):
         pass
 
@@ -13,6 +17,7 @@ class RollerScrewMetric:
                 self.frictionCoefficientStatic = 0.35
                 self.frictionCoefficientSliding = 0.3
                 self.frictionCoefficientSlidingLubricated = 0.07
+                #todo: adjust this once experiment 1 finished
                 self.frictionCoefficientRollingPerMM=0.00177
             elif material == "ABS":
                 self.tensileStrengthMPa = 44.81
